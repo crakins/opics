@@ -1,0 +1,31 @@
+from bs4 import BeautifulSoup
+import requests
+
+url="http://inspirefwtx.weebly.com/blog/our-last-day"
+imageDivClass = "wslide-slide-inner2"
+captionDivClass = "wslide-caption-text"
+
+response = requests.get(url)
+soup = BeautifulSoup(response.text)
+
+# pull all divs into a variable
+# identify which index images tuple is (for loop with index and item)
+# manually pull images truple out of div
+# create new variable with list of images (is a truple)
+# for each image pull image url and caption to dictionary variable
+# create url path from dictionary['url'] - http://inspirefwtx.weebly.com/uploads/ + url
+# 	code: image1Url = "http://inspirefwtx.weebly.com/uploads/" + dictImage1['url']
+# create original url path (add _orig to path before .jpg) http://inspirefwtx.weebly.com/uploads _ url[0:-4] + ".jpg"
+# 	code: image1UrlOrig = image1Url[0:-4] + "_orig.jpg"
+# create caption
+# 	code: image1Caption = dictImage1['caption']
+# save image and caption to file (MongoDB?)
+
+
+
+
+
+
+http://inspirefwtx.weebly.com/uploads/2/5/0/9/25099112/2917297_orig.jpg
+
+{"url":"2/5/0/9/25099112/2917297.jpg","width":"400","height":"332","caption":"This morning we got started by threading our clay dinosaur teeth onto ribbon to make a cool necklace."},{"url":"2/5/0/9/25099112/1656174.jpg","width":"400","height":"400","caption":"We then began decorating foam dinosaur feet and tails."},{"url":"2/5/0/9/25099112/6005985.jpg","width":"400","height":"400","caption":"Mr. M decided to make long claws for his dinosaur feet."},{"url":"2/5/0/9/25099112/5881664.jpg","width":"400","height":"400","caption":"Mr. E said he was going to make talons for his."},{"url":"2/5/0/9/25099112/7116758.jpg","width":"400","height":"400","caption":"A pair of finished feet and a tail."},{"url":"2/5/0/9/25099112/5084836.jpg","width":"400","height":"400","caption":"The boys dancing to Koo Koo Kanga Roo&#039;s Dinosaur Stomp."},{"url":"2/5/0/9/25099112/4456687.jpg","width":"400","height":"400","caption":"We also read a book called Saturday Night at the Dinosaur Stomp."},{"url":"2/5/0/9/25099112/7500451.jpg","width":"400","height":"323","caption":"The older boys got outside before Mr. O and I. &quot;Where did they go?&quot; Mr. O asked. &quot;I think they are hiding.&quot; He was right!"},{"url":"2/5/0/9/25099112/4319003.jpg","width":"400","height":"361","caption":"Mr. E posing with his found stick."},{"url":"2/5/0/9/25099112/3653113.jpg","width":"400","height":"400","caption":"Later on, Chalula tried to steal Mr. E&#039;s stick."},{"url":"2/5/0/9/25099112/3182693.jpg","width":"400","height":"410","caption":"&quot;Bubbles!&quot; Mr. O shouted. &quot;Let&#039;s do bubbles!&quot;"},{"url":"2/5/0/9/25099112/5808131.jpg","width":"400","height":"277","caption":"Here come the bubbles and the bubble popping."},{"url":"2/5/0/9/25099112/3204035.jpg","width":"400","height":"400","caption":"Mr. E taking a ride on the bike...the last ride for the summer."},{"url":"2/5/0/9/25099112/3882764.jpg","width":"400","height":"400","caption":"Mr. M taking one last spin."},{"url":"2/5/0/9/25099112/4934532.jpg","width":"400","height":"400","caption":"Mr. O taking his turn on the bike."},{"url":"2/5/0/9/25099112/6953984.jpg","width":"400","height":"400","caption":"&quot;Look! I can balance my cowboy hat on the stick!&quot; Mr. M told us that he felt like he was in the circus."},{"url":"2/5/0/9/25099112/8283466.jpg","width":"400","height":"400","caption":"One last summer discussion about how to get the pecans out of the tree."},{"url":"2/5/0/9/25099112/2529894.jpg","width":"400","height":"400","caption":"&quot;What&#039;s that?&quot; Mr. O asked when he heard the boys next door on the other side of the fence."},{"url":"2/5/0/9/25099112/7826080.jpg","width":"400","height":"484","caption":"Mr. E climbed up the fence to see the neighbors. Can you see him hidden in the leaves?"},{"url":"2/5/0/9/25099112/4041233.jpg","width":"400","height":"400","caption":"Mr. M climbed up the fence for a visit with the neighbors as well."},{"url":"2/5/0/9/25099112/6483447.jpg","width":"400","height":"400","caption":"&quot;The clouds and sky look cool in the mirror,&quot; Mr. E told Mr. O."},{"url":"2/5/0/9/25099112/1699546.jpg","width":"400","height":"400","caption":"&quot;I like the way the bike looks in the mirror,&quot; exclaimed Mr. M."},{"url":"2/5/0/9/25099112/9940540.jpg","width":"400","height":"400","caption":"Mr. E thought he was walking upside down with the mirror on his head."},{"url":"2/5/0/9/25099112/4394632.jpg","width":"400","height":"400","caption":"&quot;Roar, roar! I&#039;m a dinosaur in the mirror,&quot; said Mr. O."},{"url":"2/5/0/9/25099112/7184146.jpg","width":"400","height":"400","caption":"Our last snack of the summer."},{"url":"2/5/0/9/25099112/7222067.jpg","width":"400","height":"339","caption":"Movie time! As you can see the audience was captivated by Walking with Dinosaurs."},{"url":"2/5/0/9/25099112/9332463.jpg","width":"400","height":"400","caption":"Mr. M trying on his dinosaur feet, tail and T-Rex mask. &quot;I look so cool!&quot;"},{"url":"2/5/0/9/25099112/3470050.jpg","width":"400","height":"599","caption":"Mr. E also tried his dinosaur creations."},{"url":"2/5/0/9/25099112/9934512.jpg","width":"400","height":"510","caption":"All the boys loved being a dinosaur. The roars soared through the room."},{"url":"2/5/0/9/25099112/4988692.jpg","width":"400","height":"400","caption":"The summer mystery of the missing fish is solved! I think Chalula ate them all."}
