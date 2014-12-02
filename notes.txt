@@ -1,5 +1,9 @@
 from bs4 import BeautifulSoup
 import requests
+import re
+import json
+import urllib2
+from helper import convertURL, saveToFile
 
 url="http://inspirefwtx.weebly.com/blog/our-last-day"
 imageDivClass = "wslide-slide-inner2"
@@ -20,6 +24,25 @@ soup = BeautifulSoup(response.text)
 # create caption
 # 	code: image1Caption = dictImage1['caption']
 # save image and caption to file (MongoDB?)
+
+### NEW @ HOME ##
+# Get image list - imgList = soup.find_all(text=re.compile("images:"))
+# cast into a string - imgString = str(imgList)
+# find start (images:) - startIndex = imgString.index("images:")
+# find end ("}]})" ) - imgString.index("}]})")
+# return list of images in JSON format - imgData = '{"images"' + imgString[startIndex+6:endIndex+3]
+# load JSON into dict - imgDict = json.loads(imgData)
+# call a specific url imgDict['images'][0]['url']
+# print list of urls
+# for i in imgDict['images']:
+#     print i['url']
+#     print i['caption']
+
+# loop through and update url for entire dictionary
+# for i in imgDict['images']:
+#     i['url'] = convertURL(i['url'])
+
+# download image, write to .jpg file, write caption to .txt file
 
 
 
