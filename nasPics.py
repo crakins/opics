@@ -3,6 +3,7 @@ import exifread
 import os
 
 # mount nas 
+# shell script used: sudo mount -t cifs -o sudo mount -t cifs -o username=USERNAME,password=PASSWORD //192.168.0.26/Public/Shared\ Pictures /mnt/nas 
 
 # load file list
 target = open('images.txt', 'r')
