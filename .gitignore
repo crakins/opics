@@ -1,4 +1,7 @@
 *.py~
 images
 *.*~
-*.py*
+*.pyc
+calendarPics
+em.html
+images.txt
